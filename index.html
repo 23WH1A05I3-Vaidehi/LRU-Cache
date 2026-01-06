@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LRU Cache Visualizer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="title">LRU Cache Visualizer</h1>
+
+<div class="container">
+
+  <div class="card">
+    <h2>Settings</h2>
+    <input type="number" id="capacity" placeholder="Cache Capacity">
+    <button onclick="createCache()">Set Capacity</button>
+  </div>
+
+  <div class="card">
+    <h2>Operations</h2>
+    <input type="number" id="key" placeholder="Key">
+    <input type="number" id="value" placeholder="Value">
+    <div class="btn-row">
+      <button onclick="put()">PUT</button>
+      <button onclick="get()">GET</button>
+    </div>
+  </div>
+
+<div class="card wide">
+  <h2>Cache Visualization</h2>
+
+  <div class="labels">
+    <span class="mru">MRU</span>
+    <span class="lru">LRU</span>
+  </div>
+
+  <div id="cache" class="cache-row"></div>
+
+  <div id="log" class="log"></div>
+</div>
+
+
+</div>
+
+<script src="lru.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
